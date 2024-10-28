@@ -9,8 +9,6 @@ import kobley.ap.utility.security.bCryptUtil;
 public class UserPassAuthentication extends AuthenticationMethod {
 	private final String username;
 	private final String password;
-	private final StringTuple retrievedHash = null;
-	//private final PredictedUser(extends standard User class) user
 
 	public UserPassAuthentication(final String username, final String password) {
 		this.username = username;
@@ -26,7 +24,6 @@ public class UserPassAuthentication extends AuthenticationMethod {
 	}
 
 	// here ! // retrieve & parse user for verification+authentication
-
 	@Override
 	public boolean verify() {
 		return false;
@@ -34,8 +31,11 @@ public class UserPassAuthentication extends AuthenticationMethod {
 
 	@Override
 	public AuthResult authenticate() {
-		AuthResult result = new AuthResult();
-		//actually rewrite when db shit done
+		AuthResult result = new AuthResult(false, "Authentication Not Reached.");
+
+		/*
+			TODO: actually implement logic for user-pass auth. But first verify and retrieve user info from db in verify();
+		 */
 		StringTuple hash = bCryptUtil.hash(this.getPassword());
 		BCrypt.Result res = bCryptUtil.verify(this.getPassword(), hash);
 

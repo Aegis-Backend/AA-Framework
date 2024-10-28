@@ -4,6 +4,12 @@ public class AuthResult {
 	private boolean successful;
 	private String message;
 
+	//Constructor like this technically isn't needed.
+	public AuthResult(boolean successful, String msg) {
+		this.successful = successful;
+		this.message = msg;
+	}
+
 	public boolean isSuccessful() {
 		return successful;
 	}

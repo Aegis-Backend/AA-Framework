@@ -5,6 +5,8 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+//Creates directory and file/db if they don't already exist. Also provides db connection.
+
 public class Database {
 	private final String name;
 	private final String path;

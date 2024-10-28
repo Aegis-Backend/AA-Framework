@@ -5,10 +5,12 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+//temporary functions just to test if Database class worked.
+
 public class DatabaseService {
 	private final Database database;
 
-	public DatabaseService(Database database) {
+	public DatabaseService(final Database database) {
 		this.database = database;
 	}
 

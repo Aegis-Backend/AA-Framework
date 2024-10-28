@@ -4,7 +4,7 @@ import kobley.ap.custom.tuple.Tuple;
 
 import java.util.Objects;
 
-// specifically for holding hash+salt for completed hashes. this might change because verification doesnt require the salt again.
+// Specifically for holding hash+salt for completed hashes. this might change because verification doesn't require the salt again.
 public class StringTuple extends Tuple<String, String> {
 	private final String hash;
 	private final String salt;
